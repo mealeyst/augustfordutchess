@@ -1,0 +1,130 @@
+---
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About August" },
+    { href: "/issues", label: "The Issues" },
+    { href: "/get-involved", label: "Get Involved" },
+    { href: "/contact", label: "Contact" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-brand-navy shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex items-center justify-between h-16">
+            <!-- Logo / Name -->
+            <a href="/" class="flex items-center gap-3 group">
+                <div
+                    class="w-10 h-10 rounded-full bg-brand-cranberry flex items-center justify-center text-white font-display font-bold text-sm"
+                >
+                    AU
+                </div>
+                <div class="text-white leading-tight">
+                    <div class="font-display font-bold text-sm sm:text-base">August Uribe</div>
+                    <div class="text-xs text-blue-200">Dutchess County Legislator · District 24</div>
+                </div>
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="hidden md:flex items-center gap-1">
+                {
+                    navLinks.map((link) => (
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "px-3 py-2 rounded text-sm font-display font-medium transition-colors",
+                                currentPath === link.href
+                                    ? "bg-white/20 text-white"
+                                    : "text-blue-100 hover:text-white hover:bg-white/10",
+                            ]}
+                        >
+                            {link.label}
+                        </a>
+                    ))
+                }
+                <a
+                    href="/get-involved#donate"
+                    class="ml-2 bg-brand-cranberry hover:bg-red-800 text-white px-4 py-2 rounded font-display font-semibold text-sm transition-colors"
+                >
+                    Donate
+                </a>
+            </nav>
+
+            <!-- Mobile menu button -->
+            <button
+                id="mobile-menu-toggle"
+                aria-label="Toggle navigation menu"
+                class="md:hidden text-white p-2"
+            >
+                <svg
+                    id="icon-menu"
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg
+                    id="icon-close"
+                    class="w-6 h-6 hidden"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-navy border-t border-white/10">
+        <nav class="px-4 pt-2 pb-4 flex flex-col gap-1">
+            {
+                navLinks.map((link) => (
+                    <a
+                        href={link.href}
+                        class:list={[
+                            "px-3 py-2 rounded text-sm font-display font-medium transition-colors",
+                            currentPath === link.href
+                                ? "bg-white/20 text-white"
+                                : "text-blue-100 hover:text-white hover:bg-white/10",
+                        ]}
+                    >
+                        {link.label}
+                    </a>
+                ))
+            }
+            <a
+                href="/get-involved#donate"
+                class="mt-2 bg-brand-cranberry text-white px-4 py-2 rounded font-display font-semibold text-sm text-center"
+            >
+                Donate
+            </a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const iconMenu = document.getElementById("icon-menu");
+    const iconClose = document.getElementById("icon-close");
+
+    toggle?.addEventListener("click", () => {
+        const isOpen = !menu?.classList.contains("hidden");
+        menu?.classList.toggle("hidden", isOpen);
+        iconMenu?.classList.toggle("hidden", !isOpen);
+        iconClose?.classList.toggle("hidden", isOpen);
+    });
+</script>

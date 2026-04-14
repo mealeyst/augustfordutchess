@@ -1,0 +1,79 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import ContactForm from "@/components/ContactForm";
+---
+
+<BaseLayout
+    title="Contact"
+    description="Get in touch with the August Uribe for Dutchess County Legislator campaign."
+>
+    <!-- Page Header -->
+    <section class="bg-brand-navy text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">Contact Us</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
+                Have a question, a concern, or want to connect with August? We'd love to hear from you.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div>
+                <h2 class="text-2xl font-display font-bold text-brand-navy mb-6">Get in Touch</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-display font-semibold text-gray-800 mb-1">Email</h3>
+                        <a
+                            href="mailto:info@augustfordutchess.com"
+                            class="text-brand-navy hover:underline font-body"
+                        >
+                            info@augustfordutchess.com
+                        </a>
+                    </div>
+
+                    <div>
+                        <h3 class="font-display font-semibold text-gray-800 mb-2">Follow August</h3>
+                        <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                            <p class="text-sm text-gray-600 font-body leading-relaxed">
+                                August's social media accounts are coming soon — Facebook, Instagram, and
+                                Bluesky. Check back here for links once they're live.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-display font-bold text-brand-navy mb-2">Media Inquiries</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed font-body">
+                            Members of the press can reach the campaign at
+                            <a
+                                href="mailto:press@augustfordutchess.com"
+                                class="text-brand-navy hover:underline"
+                            >
+                                press@augustfordutchess.com
+                            </a>.
+                        </p>
+                    </div>
+
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-display font-bold text-brand-navy mb-2">Volunteering & Events</h3>
+                        <p class="text-sm text-gray-700 leading-relaxed font-body">
+                            To sign up to volunteer or get information about upcoming campaign events,
+                            including our monthly "Coffee & Conversation" town halls, visit our
+                            <a href="/get-involved" class="text-brand-navy hover:underline font-medium"
+                                >Get Involved page</a
+                            >.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-2xl font-display font-bold text-brand-navy mb-6">Send a Message</h2>
+                <ContactForm client:load />
+            </div>
+        </div>
+    </section>
+</BaseLayout>

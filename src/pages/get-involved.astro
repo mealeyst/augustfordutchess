@@ -1,0 +1,114 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import VolunteerForm from "@/components/VolunteerForm";
+---
+
+<BaseLayout
+    title="Get Involved"
+    description="Volunteer, donate, or sign up to support August Uribe for Dutchess County Legislator District 24."
+>
+    <!-- Page Header -->
+    <section class="bg-brand-navy text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">Get Involved</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
+                Elections are won one conversation at a time. Join us and help make the difference in
+                District 24.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ways to Help -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl font-display font-bold text-brand-navy text-center mb-12">
+                Ways You Can Help
+            </h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {
+                    [
+                        {
+                            icon: "🚪",
+                            title: "Canvass",
+                            desc: "Hit the doors with us! Deep canvassing is the most effective way to reach voters. Training provided — all skill levels welcome.",
+                        },
+                        {
+                            icon: "📞",
+                            title: "Phone Bank",
+                            desc: "Help us call voters from home. We'll provide the script, the list, and all the support you need.",
+                        },
+                        {
+                            icon: "☕",
+                            title: "Coffee & Conversation",
+                            desc: "Host or attend a monthly town hall in your neighborhood. These small gatherings are where real connections happen.",
+                        },
+                        {
+                            icon: "📢",
+                            title: "Spread the Word",
+                            desc: "Share August's message with neighbors, put up a yard sign, or help out at local events and farmers' markets.",
+                        },
+                    ].map((way) => (
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+                            <div class="text-4xl mb-4">{way.icon}</div>
+                            <h3 class="text-xl font-display font-bold text-brand-navy mb-2">{way.title}</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed font-body">{way.desc}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Sign-Up Form -->
+    <section id="volunteer" class="py-20 bg-white">
+        <div class="max-w-xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-display font-bold text-brand-navy mb-4">Sign Up to Volunteer</h2>
+                <p class="text-gray-600 font-body">
+                    Fill out the form below and a member of the campaign team will be in touch soon.
+                </p>
+            </div>
+            <VolunteerForm client:load />
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section id="donate" class="py-20 bg-brand-navy text-white">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-3xl font-display font-bold mb-4">Donate to the Campaign</h2>
+            <p class="text-blue-200 mb-8 leading-relaxed font-body">
+                Campaign contributions help us reach voters, print materials, run ads, and get August's
+                message out across District 24. Every dollar helps build the Hudson Valley our families
+                deserve.
+            </p>
+
+            <!-- Donation amount buttons -->
+            <div class="flex flex-wrap gap-3 justify-center mb-8">
+                {
+                    ["$10", "$25", "$50", "$100", "$250", "Other"].map((amount) => (
+                        <a
+                            href="#donate-link"
+                            class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-display font-semibold transition-colors min-w-[4rem]"
+                        >
+                            {amount}
+                        </a>
+                    ))
+                }
+            </div>
+
+            <a
+                id="donate-link"
+                href="#"
+                class="inline-block bg-brand-cranberry hover:bg-red-800 text-white px-8 py-4 rounded font-display font-bold text-xl transition-colors"
+            >
+                Donate Now
+            </a>
+
+            <p class="mt-6 text-xs text-blue-300 font-body">
+                Paid for by August Uribe for Dutchess County Legislator, District 24.<br />
+                Contributions are subject to New York State campaign finance laws.
+                Contributions from corporations, LLCs, and foreign nationals are prohibited.
+            </p>
+        </div>
+    </section>
+</BaseLayout>

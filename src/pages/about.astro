@@ -1,0 +1,153 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+    title="About August"
+    description="Learn about August Uribe, candidate for Dutchess County Legislator District 24 — his background, values, and vision for the community."
+>
+    <!-- Page Header -->
+    <section class="bg-brand-navy text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">About August Uribe</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
+                A progressive voice rooted in the community, committed to District 24.
+            </p>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-start">
+            <!-- Placeholder for candidate photo -->
+            <div class="flex justify-center md:sticky md:top-24">
+                <div
+                    class="w-72 h-72 rounded-2xl shadow-lg border border-gray-200 bg-brand-light flex items-center justify-center"
+                >
+                    <div class="text-center">
+                        <div
+                            class="w-24 h-24 rounded-full bg-brand-cranberry flex items-center justify-center text-white font-display font-bold text-3xl mx-auto mb-4"
+                        >
+                            AU
+                        </div>
+                        <p class="text-gray-400 text-sm font-display">Photo coming soon</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio Content -->
+            <div>
+                <h2 class="text-3xl font-display font-bold text-brand-navy mb-6">
+                    A New Standard of Service
+                </h2>
+                <div class="space-y-4 text-gray-700 leading-relaxed font-body">
+                    <p>
+                        August Uribe is running for Dutchess County Legislator in District 24 because he
+                        believes that local government should work for the people — not the other way
+                        around. Inspired to serve in the wake of the divisive 2024 elections, August wants
+                        to offer something different: a principled, community-first alternative for voters
+                        who feel left behind by partisan conflict.
+                    </p>
+                    <p>
+                        August's vision is grounded in the real challenges facing District 24 families —
+                        the rising cost of living that is pushing working people out of the Hudson Valley,
+                        schools that need more support, and roads and utilities that have been left to
+                        deteriorate for too long. He believes that progressive ideals and practical
+                        governance are not opposites — they're exactly what our community needs together.
+                    </p>
+                    <p>
+                        Whether it's advocating for wages that reflect our actual cost of living,
+                        fighting for funding for school mental health resources, or securing grants to
+                        modernize our infrastructure, August is committed to doing the work — every day,
+                        for every resident of District 24.
+                    </p>
+                </div>
+
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <div class="bg-brand-light rounded-lg p-4 text-center">
+                        <div class="text-2xl font-display font-bold text-brand-navy">District 24</div>
+                        <div class="text-sm text-gray-600 mt-1">Dutchess County, NY</div>
+                    </div>
+                    <div class="bg-brand-light rounded-lg p-4 text-center">
+                        <div class="text-2xl font-display font-bold text-brand-navy">Community First</div>
+                        <div class="text-sm text-gray-600 mt-1">Always</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">
+                    August's Values
+                </h2>
+                <p class="text-gray-600 text-lg font-body italic">What guides every decision he makes.</p>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-6">
+                {
+                    [
+                        {
+                            title: "Empathy",
+                            desc: "August believes that listening — really listening — to the people of District 24 is the first step toward meaningful change. Everyone's voice deserves to be heard.",
+                        },
+                        {
+                            title: "Accountability",
+                            desc: "Public service is a privilege. August will always be transparent about his decisions and hold himself — and county government — to a higher standard.",
+                        },
+                        {
+                            title: "Progress",
+                            desc: "Bridging progressive ideals with practical local governance. Real change happens in our communities first, and August is ready to do that work.",
+                        },
+                    ].map((value) => (
+                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 text-center">
+                            <div class="w-12 h-1 bg-brand-gold mx-auto mb-4 rounded-full" />
+                            <h3 class="text-xl font-display font-bold text-brand-navy mb-3">
+                                {value.title}
+                            </h3>
+                            <p class="text-gray-600 text-sm leading-relaxed font-body">{value.desc}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- What Inspired August -->
+    <section class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+            <div class="text-brand-gold text-5xl mb-6 font-body">&ldquo;</div>
+            <blockquote class="text-xl sm:text-2xl font-body italic text-gray-700 leading-relaxed mb-6">
+                Voices are being drowned out by national noise. We must start work at home, where working
+                families can thrive.
+            </blockquote>
+            <p class="text-gray-500 font-display font-semibold">— August Uribe</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-brand-navy text-white text-center">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl font-display font-bold mb-4">Ready to support August?</h2>
+            <p class="text-blue-200 mb-6 font-body">
+                Every conversation, every door knocked, and every dollar donated moves us forward.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a
+                    href="/get-involved"
+                    class="bg-brand-cranberry hover:bg-red-800 text-white px-6 py-3 rounded font-display font-semibold transition-colors"
+                >
+                    Get Involved
+                </a>
+                <a
+                    href="/contact"
+                    class="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-6 py-3 rounded font-display font-semibold transition-colors"
+                >
+                    Contact August
+                </a>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
