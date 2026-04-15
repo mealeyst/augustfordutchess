@@ -4,23 +4,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <BaseLayout
     title="The Issues"
-    description="August Uribe's platform for Dutchess County Legislator District 24 — Economic Dignity, Education, and Modernizing Infrastructure for the Hudson Valley."
+    description="August Uribe's platform for Dutchess County Legislator District 24 — reducing costs for families, infrastructure, public safety, and economic opportunity."
 >
     <!-- Page Header -->
     <section class="bg-brand-navy text-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
             <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">The Issues</h1>
             <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
-                Progressive Ideals. Practical Results. District 24 First.
+                Sound judgment, fiscal responsibility, and a steadfast commitment to District 24.
             </p>
         </div>
         <!-- Anchor pill navigation -->
         <div class="mt-10 flex flex-wrap justify-center gap-3 px-4">
             {
                 [
-                    { href: "#economic-dignity", label: "Economic Dignity" },
-                    { href: "#education", label: "Education" },
+                    { href: "#reduce-costs", label: "Reduce Costs" },
                     { href: "#infrastructure", label: "Infrastructure" },
+                    { href: "#public-safety", label: "Public Safety & Health" },
+                    { href: "#economic-opportunity", label: "Economic Opportunity" },
                 ].map((link) => (
                     <a
                         href={link.href}
@@ -33,51 +34,53 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
     </section>
 
-    <!-- Pillar 1: Economic Dignity — light background -->
-    <section id="economic-dignity" class="relative py-24 bg-white overflow-hidden">
-        <!-- Decorative number -->
+    <!-- Pillar 1: Reduce Costs for Families — light background -->
+    <section id="reduce-costs" class="relative py-24 bg-white overflow-hidden">
         <div
-            class="absolute right-0 top-0 font-display font-bold text-brand-gold select-none pointer-events-none leading-none"
+            class="absolute right-0 top-0 font-display font-bold text-brand-gold select-none pointer-events-none"
             style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.07; line-height: 1;"
             aria-hidden="true"
         >
             01
         </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <!-- Pillar intro -->
             <div class="max-w-2xl mb-14">
                 <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
                     Pillar One
                 </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
-                    Economic Dignity
+                    Reduce Costs<br />for Families
                 </h2>
                 <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
                 <p class="text-gray-600 text-lg leading-relaxed font-body">
-                    The cost of living in the Hudson Valley is outpacing local wages, displacing the working
-                    families who make our community what it is. August will fight to ensure that everyone who
-                    works in District 24 can afford to live here — and thrive here.
+                    Working families and seniors in District 24 are feeling the squeeze of rising costs.
+                    August will prioritize their needs, enforce fiscal discipline, and align the county
+                    budget with what our community actually requires — including taking on the housing
+                    affordability crisis head-on.
                 </p>
             </div>
-            <!-- Policy cards grid -->
-            <div class="grid sm:grid-cols-3 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
                     [
                         {
-                            title: "A Wage That Reflects Our Reality",
-                            body: "Advocate for a minimum wage that actually reflects the Hudson Valley's cost of living — not a number set decades ago. Service workers deserve to afford the community they build.",
+                            title: "Prioritize Working Families & Seniors",
+                            body: "Keep the needs of everyday residents — not special interests — at the center of every budget decision.",
                         },
                         {
-                            title: "Smart Zoning & Housing Affordability",
-                            body: "Fight for smart zoning policies and meaningful rent protections that keep District 24 residents from being priced out of their own neighborhoods.",
+                            title: "Eliminate Wasteful Spending",
+                            body: "Enforce fiscal discipline across county government. Every dollar spent must serve a clear community need.",
                         },
                         {
-                            title: "Economic Mobility for All",
-                            body: "Support county-level programs that build financial stability — job training, small business resources, and workforce development for every resident.",
+                            title: "Align the Budget with Core Needs",
+                            body: "Reshape county spending to reflect District 24's actual priorities — not bureaucratic inertia.",
+                        },
+                        {
+                            title: "Expand Affordable Housing",
+                            body: "Confront rising housing costs by expanding affordable housing stock and making District 24 livable for everyone.",
                         },
                     ].map((card) => (
                         <div class="bg-brand-light rounded-2xl p-6 border-t-4 border-brand-cranberry">
-                            <h3 class="font-display font-bold text-brand-navy text-lg mb-3">{card.title}</h3>
+                            <h3 class="font-display font-bold text-brand-navy text-base mb-3">{card.title}</h3>
                             <p class="text-gray-600 text-sm leading-relaxed font-body">{card.body}</p>
                         </div>
                     ))
@@ -86,51 +89,52 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
     </section>
 
-    <!-- Pillar 2: Education — dark background -->
-    <section id="education" class="relative py-24 bg-brand-navy overflow-hidden">
-        <!-- Decorative number -->
+    <!-- Pillar 2: Infrastructure — dark background -->
+    <section id="infrastructure" class="relative py-24 bg-brand-navy overflow-hidden">
         <div
-            class="absolute right-0 top-0 font-display font-bold text-white select-none pointer-events-none leading-none"
+            class="absolute right-0 top-0 font-display font-bold text-white select-none pointer-events-none"
             style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.05; line-height: 1;"
             aria-hidden="true"
         >
             02
         </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <!-- Pillar intro -->
             <div class="max-w-2xl mb-14">
                 <p class="text-brand-gold font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
                     Pillar Two
                 </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                    Investing in the<br />Next Generation
+                    Support &amp; Maintain<br />Infrastructure
                 </h2>
                 <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
                 <p class="text-blue-200 text-lg leading-relaxed font-body">
-                    Disparities in school funding and a lack of vocational pathways are holding our young
-                    people back. August sees education not just as a moral imperative — but as the most
-                    effective long-term economic development strategy we have.
+                    Rural roads, aging bridges, and drainage systems that can't handle storms — District 24
+                    residents deserve infrastructure that works. August will respond swiftly and cost-effectively
+                    to keep our community safe and connected.
                 </p>
             </div>
-            <!-- Policy cards grid -->
-            <div class="grid sm:grid-cols-3 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
                     [
                         {
-                            title: "School Mental Health Resources",
-                            body: "Maximize county support so every student has access to the counselors and mental health resources they need to thrive — academically and personally.",
+                            title: "Maintain Rural Roads Safely",
+                            body: "Ensure rural roads across District 24 are properly maintained — safe for residents, emergency vehicles, and businesses year-round.",
                         },
                         {
-                            title: "Vocational & Trade Partnerships",
-                            body: "Champion county partnerships with trade programs and community colleges that give young people practical, in-demand skills — and keep that talent in Dutchess County.",
+                            title: "Respond to Storm Damage",
+                            body: "Act swiftly and cost-effectively after storm damage and washouts, minimizing disruption and protecting public safety.",
                         },
                         {
-                            title: "Equitable School Funding",
-                            body: "Fight disparities in how schools are funded so the quality of a child's education doesn't depend on which side of the district line they live on.",
+                            title: "Improve Drainage Systems",
+                            body: "Upgrade aging drainage systems and culvert maintenance to prevent flooding and protect homes and roads.",
+                        },
+                        {
+                            title: "Repair Bridges with Urgency",
+                            body: "Address bridge deterioration with the urgency and fiscal responsibility it demands — no deferred maintenance, no shortcuts.",
                         },
                     ].map((card) => (
                         <div class="bg-white/10 border border-white/20 rounded-2xl p-6 border-t-4 border-t-brand-gold">
-                            <h3 class="font-display font-bold text-white text-lg mb-3">{card.title}</h3>
+                            <h3 class="font-display font-bold text-white text-base mb-3">{card.title}</h3>
                             <p class="text-blue-200 text-sm leading-relaxed font-body">{card.body}</p>
                         </div>
                     ))
@@ -139,51 +143,106 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
     </section>
 
-    <!-- Pillar 3: Infrastructure — light background -->
-    <section id="infrastructure" class="relative py-24 bg-brand-light overflow-hidden">
-        <!-- Decorative number -->
+    <!-- Pillar 3: Public Safety & Health — light gray background -->
+    <section id="public-safety" class="relative py-24 bg-brand-light overflow-hidden">
         <div
-            class="absolute right-0 top-0 font-display font-bold text-brand-navy select-none pointer-events-none leading-none"
+            class="absolute right-0 top-0 font-display font-bold text-brand-navy select-none pointer-events-none"
             style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.06; line-height: 1;"
             aria-hidden="true"
         >
             03
         </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <!-- Pillar intro -->
             <div class="max-w-2xl mb-14">
                 <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
                     Pillar Three
                 </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
-                    Modernizing<br />the Foundation
+                    Protect Public<br />Safety &amp; Health
                 </h2>
                 <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
                 <p class="text-gray-600 text-lg leading-relaxed font-body">
-                    Aging roads, crumbling bridges, inadequate transit, and spotty broadband hold our economy
-                    back and isolate residents. August will aggressively pursue every grant and partnership
-                    available to build the infrastructure District 24 depends on.
+                    Strong communities are safe communities. August will ensure our first responders have
+                    what they need, expand access to mental health treatment, and protect the civil liberties
+                    of every District 24 resident — because safety and freedom are not in conflict.
                 </p>
             </div>
-            <!-- Policy cards grid -->
-            <div class="grid sm:grid-cols-3 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
                     [
                         {
-                            title: "Roads & Bridges",
-                            body: "Aggressively pursue state and federal grants to repair aging roads and bridges across District 24 — prioritizing safety and reliability for families and first responders.",
+                            title: "Strengthen Public Safety",
+                            body: "Work to maintain and improve public safety across District 24, ensuring a visible and responsive law enforcement presence.",
                         },
                         {
-                            title: "Expanding Public Transit",
-                            body: "Invest in transit options that connect residents to jobs, healthcare, and opportunity. Economic mobility starts with being able to get around.",
+                            title: "Support Police & First Responders",
+                            body: "Give police, fire, and EMS the resources they need to do their jobs well and keep our community protected.",
                         },
                         {
-                            title: "Broadband as a Utility",
-                            body: "Treat high-speed internet as the essential utility it is. Fight for universal broadband access so no family, student, or small business in District 24 is left offline.",
+                            title: "Expand Mental Health Access",
+                            body: "Expand access to mental health treatment as a core public health priority — for residents of all ages and backgrounds.",
+                        },
+                        {
+                            title: "Protect Civil Liberties",
+                            body: "Ensure that safety measures never come at the expense of civil liberties. Every resident's rights deserve protection.",
                         },
                     ].map((card) => (
-                        <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-brand-navy">
-                            <h3 class="font-display font-bold text-brand-navy text-lg mb-3">{card.title}</h3>
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-brand-cranberry">
+                            <h3 class="font-display font-bold text-brand-navy text-base mb-3">{card.title}</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed font-body">{card.body}</p>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- Pillar 4: Economic Opportunity — white background -->
+    <section id="economic-opportunity" class="relative py-24 bg-white overflow-hidden">
+        <div
+            class="absolute right-0 top-0 font-display font-bold text-brand-gold select-none pointer-events-none"
+            style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.07; line-height: 1;"
+            aria-hidden="true"
+        >
+            04
+        </div>
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="max-w-2xl mb-14">
+                <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
+                    Pillar Four
+                </p>
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
+                    Expand Economic<br />Opportunity
+                </h2>
+                <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
+                <p class="text-gray-600 text-lg leading-relaxed font-body">
+                    A thriving District 24 means small businesses that succeed, young families that choose
+                    to stay, and a natural environment worth protecting. August will create the conditions
+                    for lasting economic growth while preserving what makes this community worth living in.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {
+                    [
+                        {
+                            title: "Support Small Businesses",
+                            body: "Strengthen the small businesses that are the backbone of District 24's economy — reducing red tape and creating conditions for them to thrive.",
+                        },
+                        {
+                            title: "Attract & Retain Young Families",
+                            body: "Create the conditions that make District 24 a place where young families want to put down roots and build their futures.",
+                        },
+                        {
+                            title: "Workforce Development",
+                            body: "Expand county workforce development programs that connect residents with good jobs and give local employers a skilled talent pipeline.",
+                        },
+                        {
+                            title: "Protect Community Character",
+                            body: "Preserve the natural environment and the quality of life that make District 24 special — growth should enhance our community, not erode it.",
+                        },
+                    ].map((card) => (
+                        <div class="bg-brand-light rounded-2xl p-6 border-t-4 border-brand-navy">
+                            <h3 class="font-display font-bold text-brand-navy text-base mb-3">{card.title}</h3>
                             <p class="text-gray-600 text-sm leading-relaxed font-body">{card.body}</p>
                         </div>
                     ))
