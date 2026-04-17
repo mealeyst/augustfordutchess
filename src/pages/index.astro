@@ -1,160 +1,130 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import IssueCard from "@/components/IssueCard.astro";
-
-const issues = [
-    {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-        </svg>`,
-        title: "Reduce Costs for Families",
-        summary:
-            "Prioritizing working families and seniors, eliminating wasteful spending, and confronting rising housing costs by expanding affordable housing stock.",
-    },
-    {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-        </svg>`,
-        title: "Support & Maintain Infrastructure",
-        summary:
-            "Keeping rural roads safe, responding swiftly to storm damage, improving drainage systems, and repairing bridges with urgency and fiscal responsibility.",
-    },
-    {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>`,
-        title: "Protect Public Safety & Health",
-        summary:
-            "Supporting police and first responders, expanding access to mental health treatment, and ensuring safety and civil liberties are both protected.",
-    },
-    {
-        icon: `<svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>`,
-        title: "Expand Economic Opportunity",
-        summary:
-            "Supporting small businesses, attracting young families, expanding workforce development, and preserving the natural environment and community character.",
-    },
-];
+import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
 ---
 
-<BaseLayout title="Home">
-    <!-- Hero Section -->
-    <section
-        class="relative bg-brand-navy text-white overflow-hidden"
-        style="min-height: 90vh; display: flex; align-items: center;"
-    >
-        <!-- Dot-grid background pattern -->
-        <div
-            class="absolute inset-0 opacity-10"
-            style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"
-        >
-        </div>
-
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div
-                    class="inline-block bg-brand-cranberry/20 border border-brand-cranberry/30 text-brand-cranberry font-display font-semibold text-sm px-4 py-1 rounded-full mb-6"
-                >
-                    Democrat · Dutchess County Legislator · District 24
-                </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                    For Our Home.<br />
-                    For Our Future.<br />
-                    <span class="text-brand-gold italic font-body font-light">For All of Us.</span>
-                </h1>
-                <p class="text-lg text-blue-100 leading-relaxed mb-10 font-body italic">
-                    "Public service means sound judgment, fiscal responsibility, and a steadfast commitment
-                    to the community."
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a
-                        href="/get-involved"
-                        class="bg-brand-cranberry hover:bg-red-800 text-white px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
-                    >
-                        Get Involved
-                    </a>
-                    <a
-                        href="/about"
-                        class="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
-                    >
-                        Meet August
-                    </a>
-                </div>
-            </div>
-
-            <!-- Candidate photo -->
-            <div class="flex justify-center">
-                <img
-                    src="/images/2026.04.CN.6895.jpg"
-                    alt="August Uribe, candidate for Dutchess County Legislator District 24"
-                    class="w-72 sm:w-80 rounded-2xl shadow-2xl object-cover border-4 border-white/20"
-                />
-            </div>
-        </div>
-    </section>
-
-    <!-- Issues Preview -->
-    <section class="py-20 bg-brand-light">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">
-                    A Platform Built for District 24
-                </h2>
-                <p class="text-gray-600 text-lg max-w-2xl mx-auto font-body">
-                    August is focused on the issues that directly impact families in our community —
-                    reducing costs, maintaining infrastructure, protecting public safety, and expanding
-                    economic opportunity.
-                </p>
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {issues.map((issue) => <IssueCard {...issue} />)}
-            </div>
-            <div class="text-center mt-10">
-                <a
-                    href="/issues"
-                    class="inline-block bg-brand-navy hover:bg-brand-navy-mid text-white px-6 py-3 rounded font-display font-semibold transition-colors"
-                >
-                    See Full Platform
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quote / Mission Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <div class="text-brand-cranberry text-5xl mb-6 font-body">&ldquo;</div>
-            <blockquote class="text-2xl sm:text-3xl font-display font-bold text-brand-navy leading-snug mb-6">
-                District 24 deserves a legislator who shows up with sound judgment and a commitment to
-                every resident — not partisan noise.
-            </blockquote>
-            <p class="text-gray-500 font-display font-semibold">— August Uribe</p>
-        </div>
-    </section>
-
-    <!-- Get Involved CTA -->
-    <section class="py-20 bg-brand-light text-brand-navy">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Join the Campaign</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto font-body">
-                Volunteer, donate, or spread the word. Together we can build the Dutchess County our
-                families deserve.
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="August Uribe for Dutchess County Legislator — District 24. Coming soon."
+        />
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <title>August Uribe for Dutchess County Legislator — District 24</title>
+        <GoogleAnalytics />
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                height: 100%;
+            }
+            body {
+                background-color: #0f172a;
+                color: white;
+                font-family: "Lora", serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 2rem;
+            }
+            .dot-grid {
+                position: fixed;
+                inset: 0;
+                opacity: 0.08;
+                background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0);
+                background-size: 40px 40px;
+                pointer-events: none;
+            }
+            .container {
+                position: relative;
+                text-align: center;
+                max-width: 640px;
+                width: 100%;
+            }
+            .badge {
+                display: inline-block;
+                background: rgba(155, 27, 48, 0.2);
+                border: 1px solid rgba(155, 27, 48, 0.4);
+                color: #e87c8d;
+                font-family: "Outfit", sans-serif;
+                font-weight: 600;
+                font-size: 0.8rem;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                padding: 0.35rem 1rem;
+                border-radius: 9999px;
+                margin-bottom: 2rem;
+            }
+            .name {
+                font-family: "Outfit", sans-serif;
+                font-weight: 800;
+                font-size: clamp(2.5rem, 8vw, 4.5rem);
+                line-height: 1.05;
+                margin-bottom: 0.5rem;
+                letter-spacing: -0.02em;
+            }
+            .name span {
+                color: #d4af37;
+            }
+            .district {
+                font-family: "Outfit", sans-serif;
+                font-weight: 300;
+                font-size: 1.1rem;
+                color: #93a8c4;
+                margin-bottom: 2.5rem;
+                letter-spacing: 0.02em;
+            }
+            .divider {
+                width: 3rem;
+                height: 3px;
+                background: #9b1b30;
+                margin: 0 auto 2.5rem;
+                border-radius: 2px;
+            }
+            .coming-soon {
+                font-family: "Outfit", sans-serif;
+                font-weight: 700;
+                font-size: clamp(1rem, 3vw, 1.35rem);
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: #d4af37;
+                margin-bottom: 1.25rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+                color: #93a8c4;
+                line-height: 1.7;
+                font-style: italic;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="dot-grid"></div>
+        <div class="container">
+            <div class="badge">Democrat &middot; Dutchess County Legislator &middot; District 24</div>
+            <h1 class="name">
+                August <span>Uribe</span>
+            </h1>
+            <p class="district">for Dutchess County</p>
+            <div class="divider"></div>
+            <p class="coming-soon">Coming Soon</p>
+            <p class="tagline">
+                For Our Home. For Our Future. For All of Us.
             </p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a
-                    href="/get-involved#volunteer"
-                    class="bg-brand-navy text-white hover:bg-brand-navy-mid px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
-                >
-                    Volunteer
-                </a>
-                <a
-                    href="/get-involved#donate"
-                    class="border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
-                >
-                    Donate
-                </a>
-            </div>
         </div>
-    </section>
-</BaseLayout>
+    </body>
+</html>
