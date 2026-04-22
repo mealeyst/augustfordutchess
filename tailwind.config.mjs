@@ -7,7 +7,9 @@ export default {
                 brand: {
                     navy: "#0f172a",
                     "navy-mid": "#1e293b",
-                    cranberry: "#9b1b30",
+                    steel: "#4F7FA1",
+                    "steel-dark": "#3a6180",
+                    "sky": "#8bcefe",
                     gold: "#d4af37",
                     light: "#f2f5f9",
                 },
