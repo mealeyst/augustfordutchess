@@ -8,7 +8,7 @@ const { attribution, dark = false } = Astro.props;
 ---
 
 <section class:list={["py-20", dark ? "bg-brand-navy text-white" : "bg-white"]}>
-    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <blockquote
             class:list={[
                 "font-body italic leading-relaxed mb-6",
@@ -20,7 +20,7 @@ const { attribution, dark = false } = Astro.props;
             <slot />
         </blockquote>
         <p class:list={["font-display font-semibold", dark ? "text-blue-300" : "text-gray-500"]}>
-            — {attribution}
+            ~ {attribution}
         </p>
     </div>
 </section>
