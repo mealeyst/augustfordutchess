@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlockQuote from "@/components/BlockQuote.astro";
 import IssueCard from "@/components/IssueCard.astro";
 
 const issues = [
@@ -36,41 +37,49 @@ const issues = [
         class="relative bg-brand-navy text-white overflow-hidden"
         style="min-height: 90vh; display: flex; align-items: center;"
     >
-        <!-- Dot-grid background pattern -->
         <div
             class="absolute inset-0 opacity-10"
             style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"
         >
         </div>
 
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 text-center">
-            <div
-                class="inline-block bg-brand-cranberry/20 border border-brand-cranberry/30 text-brand-cranberry font-display font-semibold text-sm px-4 py-1 rounded-full mb-6"
-            >
-                Democrat · Dutchess County Legislator · District 24
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Photo side -->
+            <div class="flex justify-center">
+                <img
+                    src="/images/2026.04.CN.6890.jpg"
+                    alt="August Uribe, candidate for Dutchess County Legislator District 24"
+                    class="w-72 sm:w-80 rounded-2xl shadow-2xl object-cover border-4 border-brand-steel/30"
+                />
             </div>
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                For Our Home.<br />
-                For Our Future.<br />
-                <span class="text-brand-gold italic font-body font-light">For All of Us.</span>
-            </h1>
-            <p class="text-lg sm:text-xl text-blue-100 leading-relaxed mb-10 max-w-2xl mx-auto italic font-body">
-                "Voices are being drowned out by national noise. We must start work at home, where working
-                families can thrive."
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a
-                    href="/get-involved"
-                    class="bg-brand-cranberry hover:bg-red-800 text-white px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
+            <!-- Text side -->
+            <div>
+                <div
+                    class="inline-block bg-brand-steel/20 border border-brand-steel/40 text-brand-sky font-display font-semibold text-xl px-5 py-2 rounded-full mb-6"
                 >
-                    Get Involved
-                </a>
-                <a
-                    href="/about"
-                    class="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
-                >
-                    Meet August
-                </a>
+                    Democrat · Dutchess County Legislator · District 24
+                </div>
+                <p class="text-brand-gold font-display font-semibold text-lg mb-2">Welcome, Friends &amp; Strangers, to</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold leading-tight mb-4">
+                    August Uribe's<br />Campaign
+                </h1>
+                <p class="text-2xl sm:text-3xl font-body italic text-brand-steel leading-snug mb-8">
+                    For Our Home. For Our Future.<br />For All of Us.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a
+                        href="/get-involved"
+                        class="bg-brand-steel hover:bg-brand-steel-dark text-white px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
+                    >
+                        Get Involved
+                    </a>
+                    <a
+                        href="/meet"
+                        class="border-2 border-white text-white hover:bg-white hover:text-brand-navy px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
+                    >
+                        Meet August
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -78,8 +87,8 @@ const issues = [
     <!-- Issues Preview -->
     <section class="py-20 bg-brand-light">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">
+            <div class="mb-12">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4 text-center">
                     A Platform Built for District 24
                 </h2>
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -101,36 +110,73 @@ const issues = [
         </div>
     </section>
 
-    <!-- Quote / Mission Section -->
+    <BlockQuote
+        quote="As your legislator, I will be your direct line to our seat in Dutchess County looking out for your needs in our district."
+        attribution="August Uribe"
+    />
+
+    <!-- What a County Legislator Does -->
+    <section class="py-20 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">
+                    What Does a County Legislator Do?
+                </h2>
+                <p class="text-gray-600 font-body text-lg italic">
+                    Your county legislator is your direct voice in Poughkeepsie.
+                </p>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+                {[
+                    "Votes on the county budget and how taxpayer money is spent",
+                    "Passes local laws and resolutions at the county level",
+                    "Helps decide funding for roads, public safety, health services, parks, and senior services",
+                    "Reviews contracts, major projects, and department spending",
+                    "Represents the concerns and needs of the people in their district",
+                    "Works with county officials to address local problems and plan for the future",
+                ].map((item) => (
+                    <div class="flex items-start gap-3 bg-white rounded-xl p-4 shadow-sm border border-gray-100">
+                        <span class="mt-1 w-3 h-3 rounded-full bg-brand-steel flex-shrink-0"></span>
+                        <span class="text-gray-700 font-body leading-relaxed">{item}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Election Matters -->
     <section class="py-20 bg-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <div class="text-brand-cranberry text-5xl mb-6 font-body">&ldquo;</div>
-            <blockquote class="text-2xl sm:text-3xl font-display font-bold text-brand-navy leading-snug mb-6">
-                District 24 deserves a legislator who listens to working families — not to national
-                partisan noise.
-            </blockquote>
-            <p class="text-gray-500 font-display font-semibold">— August Uribe</p>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-6 text-center">
+                Why This Election Matters
+            </h2>
+            <p class="text-gray-700 font-body text-lg leading-relaxed mb-6">
+                Local elections decide how your tax dollars are spent, whether your roads get fixed, and whether your family has access to the services you count on. Yet they are often decided by the smallest margins — sometimes just a handful of votes.
+            </p>
+            <p class="text-gray-700 font-body text-lg leading-relaxed">
+                District 24 deserves a legislator who shows up, listens, and fights for our community every single day. That is exactly what August is committed to doing. Your vote — and your voice — can make the difference.
+            </p>
         </div>
     </section>
 
     <!-- Get Involved CTA -->
-    <section class="py-20 bg-brand-cranberry text-white">
+    <section class="py-20 bg-brand-steel text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
             <h2 class="text-3xl sm:text-4xl font-display font-bold mb-4">Join the Campaign</h2>
-            <p class="text-lg text-red-100 mb-8 max-w-xl mx-auto">
+            <p class="text-lg text-blue-100 mb-8 max-w-xl mx-auto">
                 Volunteer, donate, or spread the word. Together we can build the Dutchess County our
                 families deserve.
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a
                     href="/get-involved#volunteer"
-                    class="bg-white text-brand-cranberry hover:bg-red-50 px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
+                    class="bg-white text-brand-steel hover:bg-blue-50 px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
                 >
                     Volunteer
                 </a>
                 <a
                     href="/get-involved#donate"
-                    class="border-2 border-white text-white hover:bg-white hover:text-brand-cranberry px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
+                    class="border-2 border-white text-white hover:bg-white hover:text-brand-steel px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
                 >
                     Donate
                 </a>

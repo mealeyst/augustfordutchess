@@ -1,0 +1,26 @@
+---
+interface Props {
+    attribution: string;
+    dark?: boolean;
+}
+
+const { attribution, dark = false } = Astro.props;
+---
+
+<section class:list={["py-20", dark ? "bg-brand-navy text-white" : "bg-white"]}>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <blockquote
+            class:list={[
+                "font-body italic leading-relaxed mb-6",
+                dark
+                    ? "text-xl sm:text-2xl text-blue-100"
+                    : "text-2xl sm:text-3xl text-brand-navy",
+            ]}
+        >
+            <slot />
+        </blockquote>
+        <p class:list={["font-display font-semibold", dark ? "text-blue-300" : "text-gray-500"]}>
+            — {attribution}
+        </p>
+    </div>
+</section>

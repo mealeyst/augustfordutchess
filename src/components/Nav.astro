@@ -1,7 +1,7 @@
 ---
 const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About August" },
+    { href: "/home", label: "Home" },
+    { href: "/meet", label: "Meet August" },
     { href: "/issues", label: "The Issues" },
     { href: "/get-involved", label: "Get Involved" },
     { href: "/contact", label: "Contact" },
@@ -16,13 +16,13 @@ const currentPath = Astro.url.pathname;
             <!-- Logo / Name -->
             <a href="/" class="flex items-center gap-3 group">
                 <div
-                    class="w-10 h-10 rounded-full bg-brand-cranberry flex items-center justify-center text-white font-display font-bold text-sm"
+                    class="w-10 h-10 rounded-full bg-brand-steel flex items-center justify-center text-white font-display font-bold text-sm"
                 >
                     AU
                 </div>
                 <div class="text-white leading-tight">
-                    <div class="font-display font-bold text-sm sm:text-base">August Uribe</div>
-                    <div class="text-xs text-blue-200">Dutchess County Legislator · District 24</div>
+                    <div class="font-display font-bold">August Uribe</div>
+                    <div class="text-blue-200">Candidate for Dutchess County Legislator</div>
                 </div>
             </a>
 
@@ -33,10 +33,10 @@ const currentPath = Astro.url.pathname;
                         <a
                             href={link.href}
                             class:list={[
-                                "px-3 py-2 rounded text-sm font-display font-medium transition-colors",
+                                "px-3 py-2 rounded text-base font-display font-medium transition-colors",
                                 currentPath === link.href
                                     ? "bg-white/20 text-white"
-                                    : "text-blue-100 hover:text-white hover:bg-white/10",
+                                    : "text-brand-sky hover:text-white hover:bg-white/10",
                             ]}
                         >
                             {link.label}
@@ -45,7 +45,7 @@ const currentPath = Astro.url.pathname;
                 }
                 <a
                     href="/get-involved#donate"
-                    class="ml-2 bg-brand-cranberry hover:bg-red-800 text-white px-4 py-2 rounded font-display font-semibold text-sm transition-colors"
+                    class="ml-2 bg-brand-steel hover:bg-brand-steel-dark text-white px-4 py-2 rounded font-display font-semibold text-base transition-colors"
                 >
                     Donate
                 </a>
@@ -95,10 +95,10 @@ const currentPath = Astro.url.pathname;
                     <a
                         href={link.href}
                         class:list={[
-                            "px-3 py-2 rounded text-sm font-display font-medium transition-colors",
+                            "px-3 py-2 rounded text-base font-display font-medium transition-colors",
                             currentPath === link.href
                                 ? "bg-white/20 text-white"
-                                : "text-blue-100 hover:text-white hover:bg-white/10",
+                                : "text-brand-sky hover:text-white hover:bg-white/10",
                         ]}
                     >
                         {link.label}
@@ -107,7 +107,7 @@ const currentPath = Astro.url.pathname;
             }
             <a
                 href="/get-involved#donate"
-                class="mt-2 bg-brand-cranberry text-white px-4 py-2 rounded font-display font-semibold text-sm text-center"
+                class="mt-2 bg-brand-steel text-white px-4 py-2 rounded font-display font-semibold text-base text-center"
             >
                 Donate
             </a>

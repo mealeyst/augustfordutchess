@@ -76,7 +76,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
             .divider {
                 width: 2rem;
                 height: 2px;
-                background: #9b1b30;
+                background: #4F7FA1;
                 margin: 0 auto 2rem;
                 border-radius: 2px;
             }
@@ -107,7 +107,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
             }
             button {
                 width: 100%;
-                background: #9b1b30;
+                background: #4F7FA1;
                 color: white;
                 font-family: "Outfit", sans-serif;
                 font-size: 1rem;
@@ -120,12 +120,12 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
                 margin-top: 0.25rem;
             }
             button:hover {
-                background: #7f1626;
+                background: #3a6180;
             }
             .error {
                 display: none;
-                background: rgba(155, 27, 48, 0.15);
-                border: 1px solid rgba(155, 27, 48, 0.4);
+                background: rgba(79, 127, 161, 0.15);
+                border: 1px solid rgba(79, 127, 161, 0.4);
                 color: #e87c8d;
                 font-size: 0.875rem;
                 padding: 0.6rem 0.85rem;
@@ -159,7 +159,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
                     return match ? match[2] : null;
                 }
                 if (getCookie("site_auth")) {
-                    window.location.replace("/about");
+                    window.location.replace("/home");
                 }
             })();
 
@@ -171,7 +171,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics.astro";
                 if (username === "august" && password === "Dutch3ssD3ms") {
                     var maxAge = 60 * 60 * 24 * 30;
                     document.cookie = "site_auth=1; path=/; max-age=" + maxAge;
-                    window.location.href = "/about";
+                    window.location.href = "/home";
                 } else {
                     error.style.display = "block";
                 }

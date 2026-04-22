@@ -16,8 +16,10 @@ const volunteerOptions = [
     { value: "phonebank", label: "Phone banking" },
     { value: "events", label: "Help at events" },
     { value: "social", label: "Social media support" },
-    { value: "yardsign", label: "Yard sign" },
+    { value: "deliver-yardsign", label: "Deliver yard signs" },
+    { value: "want-yardsign", label: "Want a yard sign" },
     { value: "coffeechats", label: "Coffee & Conversation events" },
+    { value: "host-event", label: "Host an event" },
     { value: "other", label: "Other" },
 ];
 
@@ -81,7 +83,7 @@ export default function VolunteerForm() {
                         htmlFor="firstName"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        First Name <span className="text-brand-cranberry">*</span>
+                        First Name <span className="text-brand-steel">*</span>
                     </label>
                     <input
                         id="firstName"
@@ -98,7 +100,7 @@ export default function VolunteerForm() {
                         htmlFor="lastName"
                         className="block text-sm font-medium text-gray-700 mb-1"
                     >
-                        Last Name <span className="text-brand-cranberry">*</span>
+                        Last Name <span className="text-brand-steel">*</span>
                     </label>
                     <input
                         id="lastName"
@@ -114,7 +116,7 @@ export default function VolunteerForm() {
 
             <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email <span className="text-brand-cranberry">*</span>
+                    Email <span className="text-brand-steel">*</span>
                 </label>
                 <input
                     id="email"

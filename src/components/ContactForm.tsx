@@ -39,7 +39,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-5">
             <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Your Name <span className="text-red-500">*</span>
+                    Your Name <span className="text-brand-steel">*</span>
                 </label>
                 <input
                     id="name"
@@ -53,7 +53,7 @@ export default function ContactForm() {
 
             <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email <span className="text-red-500">*</span>
+                    Email <span className="text-brand-steel">*</span>
                 </label>
                 <input
                     id="email"
@@ -67,11 +67,12 @@ export default function ContactForm() {
 
             <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Subject
+                    Subject <span className="text-brand-steel">*</span>
                 </label>
                 <input
                     id="subject"
                     type="text"
+                    required
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-navy"
@@ -80,7 +81,7 @@ export default function ContactForm() {
 
             <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message <span className="text-red-500">*</span>
+                    Message <span className="text-brand-steel">*</span>
                 </label>
                 <textarea
                     id="message"

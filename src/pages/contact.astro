@@ -10,8 +10,8 @@ import ContactForm from "@/components/ContactForm";
     <!-- Page Header -->
     <section class="bg-brand-navy text-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">Contact Us</h1>
-            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">GET IN TOUCH</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic text-left">
                 Have a question, a concern, or want to connect with August? We'd love to hear from you.
             </p>
         </div>
@@ -21,10 +21,10 @@ import ContactForm from "@/components/ContactForm";
         <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12">
             <!-- Contact Info -->
             <div>
-                <h2 class="text-2xl font-display font-bold text-brand-navy mb-6">Get in Touch</h2>
+                <h2 class="text-2xl font-display font-bold text-brand-navy mb-6">Contact Information</h2>
                 <div class="space-y-6">
-                    <div>
-                        <h3 class="font-display font-semibold text-gray-800 mb-1">Email</h3>
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-display font-bold text-brand-navy mb-2">Email</h3>
                         <a
                             href="mailto:info@augustfordutchess.com"
                             class="text-brand-navy hover:underline font-body"
@@ -33,14 +33,11 @@ import ContactForm from "@/components/ContactForm";
                         </a>
                     </div>
 
-                    <div>
-                        <h3 class="font-display font-semibold text-gray-800 mb-2">Follow August</h3>
-                        <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
-                            <p class="text-sm text-gray-600 font-body leading-relaxed">
-                                August's social media accounts are coming soon — Facebook, Instagram, and
-                                Bluesky. Check back here for links once they're live.
-                            </p>
-                        </div>
+                    <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
+                        <h3 class="font-display font-bold text-brand-navy mb-2">Follow August</h3>
+                        <p class="text-sm text-gray-600 font-body leading-relaxed">
+                            Follow August on social media to ask questions, share your community concerns, and stay up to date on the campaign. Facebook, Instagram, and Bluesky accounts are coming soon — check back here for links.
+                        </p>
                     </div>
 
                     <div class="bg-brand-light rounded-xl p-5 border border-gray-200">
@@ -74,6 +71,31 @@ import ContactForm from "@/components/ContactForm";
                 <h2 class="text-2xl font-display font-bold text-brand-navy mb-6">Send a Message</h2>
                 <ContactForm client:load />
             </div>
+        </div>
+    </section>
+
+    <!-- What a County Legislator Does -->
+    <section class="py-16 bg-brand-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6">
+            <h2 class="text-2xl font-display font-bold text-brand-navy mb-6 text-center">What Does a County Legislator Do?</h2>
+            <p class="text-gray-700 font-body leading-relaxed mb-4">
+                A county legislator is a local elected official who helps make decisions about how county government operates. In Dutchess County, that means representing the communities of Pawling and Dover on countywide issues — not running town government directly, but being the voice of District 24 in every county decision.
+            </p>
+            <ul class="space-y-3 text-gray-700 font-body">
+                {[
+                    "Votes on the county budget and how taxpayer money is spent",
+                    "Passes local laws and resolutions at the county level",
+                    "Helps decide funding for roads, public safety, health services, parks, senior services, and other county programs",
+                    "Reviews contracts, major projects, and department spending",
+                    "Represents the concerns and needs of the people in their district",
+                    "Works with other legislators and county officials to address local problems and plan for the future",
+                ].map((item) => (
+                    <li class="flex items-start gap-3">
+                        <span class="mt-1 w-2 h-2 rounded-full bg-brand-steel flex-shrink-0"></span>
+                        <span>{item}</span>
+                    </li>
+                ))}
+            </ul>
         </div>
     </section>
 </BaseLayout>

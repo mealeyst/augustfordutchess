@@ -9,8 +9,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Page Header -->
     <section class="bg-brand-navy text-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">The Issues</h1>
-            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">THE ISSUES</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic text-left">
                 Sound judgment, fiscal responsibility, and a steadfast commitment to District 24.
             </p>
         </div>
@@ -25,7 +25,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                 ].map((link) => (
                     <a
                         href={link.href}
-                        class="px-5 py-2 rounded-full border border-white/30 text-white/80 hover:bg-white/15 hover:text-white font-display text-sm font-medium transition-colors"
+                        class="px-5 py-2 rounded-full border border-white/30 text-white/80 hover:bg-white/15 hover:text-white font-display text-base font-medium transition-colors"
                     >
                         {link.label}
                     </a>
@@ -36,20 +36,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     <!-- Pillar 1: Reduce Costs for Families — light background -->
     <section id="reduce-costs" class="relative py-24 bg-white overflow-hidden">
-        <div
-            class="absolute right-0 top-0 font-display font-bold text-brand-gold select-none pointer-events-none"
-            style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.07; line-height: 1;"
-            aria-hidden="true"
-        >
-            01
-        </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="max-w-2xl mb-14">
-                <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
-                    Pillar One
-                </p>
-                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
-                    Reduce Costs<br />for Families
+                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight text-center">
+                    Reduce Costs for Families
                 </h2>
                 <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
                 <p class="text-gray-600 text-lg leading-relaxed font-body">
@@ -64,7 +54,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                     [
                         {
                             title: "Prioritize Working Families & Seniors",
-                            body: "Keep the needs of everyday residents — not special interests — at the center of every budget decision.",
+                            body: "Keep the needs of everyday residents at the center of every budget decision. Most importantly, special interests will never take priority over the people of District 24.",
                         },
                         {
                             title: "Eliminate Wasteful Spending",
@@ -79,7 +69,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                             body: "Confront rising housing costs by expanding affordable housing stock and making District 24 livable for everyone.",
                         },
                     ].map((card) => (
-                        <div class="bg-brand-light rounded-2xl p-6 border-t-4 border-brand-cranberry">
+                        <div class="bg-brand-light rounded-2xl p-6 border-t-4 border-brand-steel">
                             <h3 class="font-display font-bold text-brand-navy text-base mb-3">{card.title}</h3>
                             <p class="text-gray-600 text-sm leading-relaxed font-body">{card.body}</p>
                         </div>
@@ -91,18 +81,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     <!-- Pillar 2: Infrastructure — dark background -->
     <section id="infrastructure" class="relative py-24 bg-brand-navy overflow-hidden">
-        <div
-            class="absolute right-0 top-0 font-display font-bold text-white select-none pointer-events-none"
-            style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.05; line-height: 1;"
-            aria-hidden="true"
-        >
-            02
-        </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="max-w-2xl mb-14">
-                <p class="text-brand-gold font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
-                    Pillar Two
-                </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
                     Support &amp; Maintain<br />Infrastructure
                 </h2>
@@ -118,7 +98,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                     [
                         {
                             title: "Maintain Rural Roads Safely",
-                            body: "Ensure rural roads across District 24 are properly maintained — safe for residents, emergency vehicles, and businesses year-round.",
+                            body: "Ensure rural roads across District 24 are properly maintained year-round. Most importantly, they must be safe for residents, emergency vehicles, and businesses at all times.",
                         },
                         {
                             title: "Respond to Storm Damage",
@@ -130,7 +110,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                         },
                         {
                             title: "Repair Bridges with Urgency",
-                            body: "Address bridge deterioration with the urgency and fiscal responsibility it demands — no deferred maintenance, no shortcuts.",
+                            body: "Address bridge deterioration with the urgency and fiscal responsibility it demands. Most importantly, no deferred maintenance and no shortcuts.",
                         },
                     ].map((card) => (
                         <div class="bg-white/10 border border-white/20 rounded-2xl p-6 border-t-4 border-t-brand-gold">
@@ -145,18 +125,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     <!-- Pillar 3: Public Safety & Health — light gray background -->
     <section id="public-safety" class="relative py-24 bg-brand-light overflow-hidden">
-        <div
-            class="absolute right-0 top-0 font-display font-bold text-brand-navy select-none pointer-events-none"
-            style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.06; line-height: 1;"
-            aria-hidden="true"
-        >
-            03
-        </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="max-w-2xl mb-14">
-                <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
-                    Pillar Three
-                </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
                     Protect Public<br />Safety &amp; Health
                 </h2>
@@ -187,7 +157,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                             body: "Ensure that safety measures never come at the expense of civil liberties. Every resident's rights deserve protection.",
                         },
                     ].map((card) => (
-                        <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-brand-cranberry">
+                        <div class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-brand-steel">
                             <h3 class="font-display font-bold text-brand-navy text-base mb-3">{card.title}</h3>
                             <p class="text-gray-600 text-sm leading-relaxed font-body">{card.body}</p>
                         </div>
@@ -199,18 +169,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
     <!-- Pillar 4: Economic Opportunity — white background -->
     <section id="economic-opportunity" class="relative py-24 bg-white overflow-hidden">
-        <div
-            class="absolute right-0 top-0 font-display font-bold text-brand-gold select-none pointer-events-none"
-            style="font-size: clamp(8rem, 20vw, 16rem); opacity: 0.07; line-height: 1;"
-            aria-hidden="true"
-        >
-            04
-        </div>
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
             <div class="max-w-2xl mb-14">
-                <p class="text-brand-cranberry font-display font-bold text-xs uppercase tracking-[0.25em] mb-3">
-                    Pillar Four
-                </p>
                 <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
                     Expand Economic<br />Opportunity
                 </h2>
@@ -226,7 +186,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                     [
                         {
                             title: "Support Small Businesses",
-                            body: "Strengthen the small businesses that are the backbone of District 24's economy — reducing red tape and creating conditions for them to thrive.",
+                            body: "Strengthen the small businesses that are the backbone of District 24's economy. Most importantly, reduce red tape and create the conditions for them to thrive.",
                         },
                         {
                             title: "Attract & Retain Young Families",
@@ -238,7 +198,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                         },
                         {
                             title: "Protect Community Character",
-                            body: "Preserve the natural environment and the quality of life that make District 24 special — growth should enhance our community, not erode it.",
+                            body: "Preserve the natural environment and the quality of life that make District 24 special. Most importantly, growth should enhance our community, not erode it.",
                         },
                     ].map((card) => (
                         <div class="bg-brand-light rounded-2xl p-6 border-t-4 border-brand-navy">
@@ -254,15 +214,15 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- CTA -->
     <section class="py-16 bg-brand-light text-brand-navy text-center">
         <div class="max-w-2xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl font-display font-bold mb-4">These issues matter to you too?</h2>
+            <h2 class="text-2xl font-display font-bold mb-4">These issues matter to all of us.</h2>
             <p class="text-gray-600 mb-6 font-body">
-                Help August carry this message to every doorstep in District 24.
+                District 24 deserves strong, accountable representation in Poughkeepsie. Help August take this message to every doorstep.
             </p>
             <a
                 href="/get-involved"
                 class="inline-block bg-brand-navy text-white hover:bg-brand-navy-mid px-6 py-3 rounded font-display font-semibold text-lg transition-colors"
             >
-                Get Involved Today
+                GET INVOLVED TODAY
             </a>
         </div>
     </section>

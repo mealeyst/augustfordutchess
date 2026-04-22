@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import BlockQuote from "@/components/BlockQuote.astro";
 ---
 
 <BaseLayout
@@ -9,31 +10,29 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Page Header -->
     <section class="bg-brand-navy text-white py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">About August Uribe</h1>
-            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic">
-                Steady, accountable leadership rooted in fiscal responsibility, fairness, and transparency.
-            </p>
+            <h1 class="text-4xl sm:text-5xl font-display font-bold mb-4">Meet August Uribe</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto font-body italic"><span class="block">Steady, accountable leadership rooted in</span><span class="block">fiscal responsibility, fairness, and transparency.</span></p>
         </div>
     </section>
 
     <!-- Bio Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-start">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-12 items-start">
             <!-- Candidate photo -->
             <div class="flex justify-center md:sticky md:top-24">
                 <img
                     src="/images/2026.04.CN.6890.jpg"
                     alt="August Uribe, candidate for Dutchess County Legislator District 24"
-                    class="w-72 rounded-2xl shadow-lg object-cover border border-gray-200"
+                    class="w-80 rounded-2xl shadow-lg object-cover border border-gray-200"
                 />
             </div>
 
             <!-- Bio Content -->
             <div>
                 <h2 class="text-3xl font-display font-bold text-brand-navy mb-6">
-                    Committed to District 24
+                    A Legislator That Will Be Committed to District 24
                 </h2>
-                <div class="space-y-4 text-gray-700 leading-relaxed font-body">
+                <div class="space-y-4 text-slate-600 leading-relaxed font-body">
                     <p>
                         August Uribe is committed to serving the residents of Dutchess County with steady,
                         accountable leadership grounded in fiscal responsibility, fairness, and transparency.
@@ -71,19 +70,18 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Stats -->
     <section class="py-16 bg-brand-light">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
                 {
                     [
                         { stat: "25+", label: "Years as Licensed Auctioneer" },
                         { stat: "$20M+", label: "Raised for Community Organizations" },
                         { stat: "3", label: "Languages — English, Spanish & Portuguese" },
-                        { stat: "Smithsonian", label: "Board Member, Archives of American Art" },
                     ].map((item) => (
                         <div class="bg-white rounded-xl p-5 text-center shadow-sm border border-gray-100 border-t-4 border-t-brand-gold">
-                            <div class="text-xl font-display font-bold text-brand-cranberry mb-1">
+                            <div class="text-3xl font-display font-bold text-brand-steel mb-1">
                                 {item.stat}
                             </div>
-                            <div class="text-xs text-gray-500 leading-snug font-body">{item.label}</div>
+                            <div class="text-sm text-gray-600 leading-snug font-body">{item.label}</div>
                         </div>
                     ))
                 }
@@ -95,8 +93,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <section class="py-20 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4">
-                    August's Values
+                <h2 class="text-3xl sm:text-4xl font-display font-bold text-brand-navy mb-4 tracking-wide">
+                    AUGUST'S VALUES
                 </h2>
                 <p class="text-gray-600 text-lg font-body italic">What guides every decision he makes.</p>
             </div>
@@ -117,7 +115,7 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
                         },
                     ].map((value) => (
                         <div class="bg-brand-light rounded-xl p-6 border-t-4 border-brand-gold text-center">
-                            <h3 class="text-xl font-display font-bold text-brand-navy mb-3">
+                            <h3 class="text-xl font-display font-bold text-brand-navy mb-3 uppercase tracking-wide">
                                 {value.title}
                             </h3>
                             <p class="text-gray-600 text-sm leading-relaxed font-body">{value.desc}</p>
@@ -128,35 +126,29 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
         </div>
     </section>
 
-    <!-- Quote -->
-    <section class="py-20 bg-brand-navy text-white">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <div class="text-brand-gold text-5xl mb-6 font-body">&ldquo;</div>
-            <blockquote class="text-xl sm:text-2xl font-body italic text-blue-100 leading-relaxed mb-6">
-                Public service means sound judgment, fiscal responsibility, and a steadfast commitment to
-                the community.
-            </blockquote>
-            <p class="text-blue-300 font-display font-semibold">— August Uribe</p>
-        </div>
-    </section>
+    <BlockQuote
+        quote="Public service means sound judgment, fiscal responsibility, and a steadfast commitment to the community."
+        attribution="August Uribe"
+        dark
+    />
 
     <!-- CTA -->
-    <section class="py-16 bg-brand-light text-brand-navy text-center">
+    <section class="py-16 bg-brand-light text-brand-navy">
         <div class="max-w-2xl mx-auto px-4 sm:px-6">
-            <h2 class="text-2xl font-display font-bold mb-4">Ready to support August?</h2>
+            <h2 class="text-2xl font-display font-bold mb-4 text-center">It's Time for a Democrat in District 24.</h2>
             <p class="text-gray-600 mb-6 font-body">
-                Every conversation, every door knocked, and every dollar donated moves us forward.
+                August can win this race with a team of dedicated and passionate volunteers like yourself. Every conversation, every door knocked, and every dollar donated moves us forward.
             </p>
             <div class="flex flex-wrap gap-4 justify-center">
                 <a
                     href="/get-involved"
                     class="bg-brand-navy text-white hover:bg-brand-navy-mid px-6 py-3 rounded font-display font-semibold transition-colors"
                 >
-                    Get Involved
+                    GET INVOLVED TODAY
                 </a>
                 <a
                     href="/contact"
-                    class="border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white px-6 py-3 rounded font-display font-semibold transition-colors"
+                    class="bg-brand-steel hover:bg-brand-steel-dark text-white px-6 py-3 rounded font-display font-semibold transition-colors"
                 >
                     Contact August
                 </a>
