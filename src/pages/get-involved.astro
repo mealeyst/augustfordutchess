@@ -95,20 +95,33 @@ import VolunteerForm from "@/components/VolunteerForm";
             <!-- Donation amount buttons -->
             <div class="flex flex-wrap gap-3 justify-center mb-8">
                 {
-                    ["$10", "$25", "$50", "$100", "$250", "Other"].map((amount) => (
-                        <a
-                            href="#donate-link"
-                            class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-display font-semibold transition-colors min-w-[4rem]"
-                        >
-                            {amount}
-                        </a>
-                    ))
+                    [
+                        { label: "$10", amount: "10" },
+                        { label: "$25", amount: "25" },
+                        { label: "$50", amount: "50" },
+                        { label: "$100", amount: "100" },
+                        { label: "$250", amount: "250" },
+                        { label: "Other", amount: null },
+                    ].map(({ label, amount }) => {
+                        const refcode = amount ? `getinvolved_${amount}` : "getinvolved_other";
+                        const params = new URLSearchParams();
+                        if (amount) params.set("amount", amount);
+                        params.set("refcode", refcode);
+                        const href = `https://secure.actblue.com/donate/august-uribe-1?${params.toString()}`;
+                        return (
+                            <a
+                                href={href}
+                                class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-display font-semibold transition-colors min-w-[4rem]"
+                            >
+                                {label}
+                            </a>
+                        );
+                    })
                 }
             </div>
 
             <a
-                id="donate-link"
-                href="#"
+                href="https://secure.actblue.com/donate/august-uribe-1?refcode=getinvolved_main"
                 class="inline-block bg-brand-steel hover:bg-brand-steel-dark text-white px-8 py-4 rounded font-display font-bold text-xl transition-colors"
             >
                 Donate Now
