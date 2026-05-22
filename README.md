@@ -1,6 +1,6 @@
 # August for Dutchess
 
-Campaign website for August Uribe, Democratic candidate for Dutchess County Legislator, District 24 (Pawling & Dover).
+Campaign website for August Uribe, Democratic candidate for Dutchess County Legislator, Dover & East Pawling.
 
 Production site: https://www.augustfordutchess.com
 
