@@ -16,7 +16,7 @@ export default {
             },
             fontFamily: {
                 display: ["Outfit", "sans-serif"],
-                body: ["Lora", "serif"],
+                body: ["Montserrat", "sans-serif"],
             },
         },
     },
