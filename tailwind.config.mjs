@@ -11,6 +11,8 @@ export default {
                     "steel-dark": "#3a6180",
                     "sky": "#8bcefe",
                     gold: "#d4af37",
+                    money: "#1f7a3a",
+                    "money-dark": "#175c2c",
                     light: "#f2f5f9",
                 },
             },
