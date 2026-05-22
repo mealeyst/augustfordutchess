@@ -14,10 +14,23 @@ export default function ContactForm() {
         setState("submitting");
 
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            // TODO: Replace with real submission logic
-            // e.g., Formspree, Netlify Forms, or a custom API route
-            setState("success");
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY,
+                    from_name: name,
+                    email,
+                    subject: `[Contact] ${subject}`,
+                    message,
+                }),
+            });
+
+            const data = (await response.json()) as { success?: boolean };
+            setState(response.ok && data.success ? "success" : "error");
         } catch {
             setState("error");
         }

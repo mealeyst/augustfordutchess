@@ -52,11 +52,30 @@ export default function VolunteerForm() {
         e.preventDefault();
         setState("submitting");
 
+        const interestLabels = formData.interests
+            .map((value) => volunteerOptions.find((o) => o.value === value)?.label ?? value)
+            .join(", ");
+
         try {
-            await new Promise((resolve) => setTimeout(resolve, 1000));
-            // TODO: Replace with real submission logic
-            // e.g., Netlify Forms, Formspree, or a serverless function
-            setState("success");
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY,
+                    from_name: `${formData.firstName} ${formData.lastName}`.trim(),
+                    email: formData.email,
+                    subject: `[Get Involved] ${formData.firstName} ${formData.lastName}`.trim(),
+                    phone: formData.phone || "(not provided)",
+                    interests: interestLabels || "(none selected)",
+                    message: formData.message || "(no additional message)",
+                }),
+            });
+
+            const data = (await response.json()) as { success?: boolean };
+            setState(response.ok && data.success ? "success" : "error");
         } catch {
             setState("error");
         }
