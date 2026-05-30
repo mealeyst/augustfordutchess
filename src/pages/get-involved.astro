@@ -29,25 +29,25 @@ import VolunteerForm from "@/components/VolunteerForm";
                 {
                     [
                         {
-                            title: "Canvass",
-                            desc: "Hit the doors with us! Deep canvassing is the most effective way to reach voters. Training provided. You got this!",
+                            title: "Coffee & Conversation",
+                            desc: "Host or attend a block party in your neighborhood. Small gatherings are where real connections happen.",
+                        },
+                        {
+                            title: "Spread the Word",
+                            desc: "Share August's message with neighbors, friends, family, and co-workers. Put up a yard sign or help out at local community events.",
                         },
                         {
                             title: "Phone Bank",
                             desc: "Help us call voters from home or at a hosted event. We'll provide the script, the list, and all the support you need.",
                         },
                         {
-                            title: "Coffee & Conversation",
-                            desc: "Host or attend a block party in your neighborhood. These small gatherings are where real connections happen.",
-                        },
-                        {
-                            title: "Spread the Word",
-                            desc: "Share August's message with neighbors, friends, family, and co-workers. Put up a yard sign or help out at local community events.",
+                            title: "Canvas",
+                            desc: "Going out and canvassing is the most effective way to reach voters. Training isprovided, you got this!",
                         },
                     ].map((way) => (
                         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-brand-steel text-center">
                             <h3 class="text-xl font-display font-bold text-brand-navy mb-2">{way.title}</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed font-body">{way.desc}</p>
+                            <p class="text-gray-600 text-sm leading-relaxed font-body text-left">{way.desc}</p>
                         </div>
                     ))
                 }
