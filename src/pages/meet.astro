@@ -1,6 +1,15 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlockQuote from "@/components/BlockQuote.astro";
+import FilmStrip from "@/components/FilmStrip.astro";
+
+const campaignSigns = [
+    { src: "/images/August Dover Sign 2.jpg", alt: "August Uribe campaign sign in Dover" },
+    { src: "/images/August Dover Sign.jpg", alt: "August Uribe campaign sign in Dover" },
+    { src: "/images/August Pawl8ng Sign.jpg", alt: "August Uribe campaign sign in Pawling" },
+    { src: "/images/August Pawling Sign 2.jpg", alt: "August Uribe campaign sign in Pawling" },
+    { src: "/images/August Pawling Sign.jpg", alt: "August Uribe campaign sign in Pawling" },
+];
 ---
 
 <BaseLayout
@@ -65,6 +74,17 @@ import BlockQuote from "@/components/BlockQuote.astro";
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Campaign Signs Film Strip -->
+    <section class="bg-brand-navy py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center mb-8">
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-white mb-2">
+                On the Trail in Dover & East Pawling
+            </h2>
+            <p class="text-blue-200 font-body italic">August around the community</p>
+        </div>
+        <FilmStrip images={campaignSigns} />
     </section>
 
     <!-- Stats -->
