@@ -19,13 +19,80 @@ import VolunteerForm from "@/components/VolunteerForm";
         </div>
     </section>
 
+    <!-- Volunteer + Donate (side by side) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 items-start">
+            <!-- Sign Up to Volunteer (left) -->
+            <div id="volunteer">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-display font-bold text-brand-navy mb-4">Sign Up to Volunteer</h2>
+                    <p class="text-gray-600 font-body">
+                        Fill out the form below and a member of the campaign team will be in touch soon.
+                    </p>
+                </div>
+                <VolunteerForm client:load />
+            </div>
+
+            <!-- Donate to the Campaign (right) -->
+            <div id="donate" class="bg-brand-navy text-white rounded-2xl p-8 sm:p-10 text-center">
+                <h2 class="text-3xl font-display font-bold mb-4">Donate to the Campaign</h2>
+                <p class="text-blue-200 mb-8 leading-relaxed font-body">
+                    Campaign contributions help us reach voters, print materials, run ads, and get August's
+                    message out across Dover & East Pawling. Every dollar helps build the Hudson Valley our families
+                    deserve.
+                </p>
+
+                <!-- Donation amount buttons -->
+                <div class="flex flex-wrap gap-3 justify-center mb-8">
+                    {
+                        [
+                            { label: "$10", amount: "10" },
+                            { label: "$25", amount: "25" },
+                            { label: "$50", amount: "50" },
+                            { label: "$100", amount: "100" },
+                            { label: "$250", amount: "250" },
+                            { label: "Other", amount: null },
+                        ].map(({ label, amount }) => {
+                            const refcode = amount ? `getinvolved_${amount}` : "getinvolved_other";
+                            const params = new URLSearchParams();
+                            if (amount) params.set("amount", amount);
+                            params.set("refcode", refcode);
+                            const href = `https://secure.actblue.com/donate/august-uribe-1?${params.toString()}`;
+                            return (
+                                <a
+                                    href={href}
+                                    class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-display font-semibold transition-colors min-w-[4rem]"
+                                >
+                                    {label}
+                                </a>
+                            );
+                        })
+                    }
+                </div>
+
+                <a
+                    href="https://secure.actblue.com/donate/august-uribe-1?refcode=getinvolved_main"
+                    class="inline-block bg-brand-money hover:bg-brand-money-dark text-white px-8 py-4 rounded font-display font-bold text-xl transition-colors"
+                >
+                    Donate Now
+                </a>
+
+                <p class="mt-6 text-xs text-blue-300 font-body">
+                    Paid for by August Uribe for Dutchess County Legislator, Dover & East Pawling.<br />
+                    Contributions are subject to New York State campaign finance laws.
+                    Contributions from corporations, LLCs, and foreign nationals are prohibited.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Ways to Help -->
     <section class="py-20 bg-brand-light">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <h2 class="text-3xl font-display font-bold text-brand-navy text-center mb-12">
                 Ways You Can Help
             </h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 {
                     [
                         {
@@ -44,6 +111,10 @@ import VolunteerForm from "@/components/VolunteerForm";
                             title: "Canvas",
                             desc: "Going out and canvassing is the most effective way to reach voters. Training is provided, you got this!",
                         },
+                        {
+                            title: "Donate",
+                            desc: 'Please "click" on the green button above.',
+                        },
                     ].map((way) => (
                         <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100 border-t-4 border-t-brand-steel text-center">
                             <h3 class="text-xl font-display font-bold text-brand-navy mb-2">{way.title}</h3>
@@ -52,72 +123,6 @@ import VolunteerForm from "@/components/VolunteerForm";
                     ))
                 }
             </div>
-        </div>
-    </section>
-
-    <!-- Volunteer Sign-Up Form -->
-    <section id="volunteer" class="py-20 bg-white">
-        <div class="max-w-xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-display font-bold text-brand-navy mb-4">Sign Up to Volunteer</h2>
-                <p class="text-gray-600 font-body">
-                    Fill out the form below and a member of the campaign team will be in touch soon.
-                </p>
-            </div>
-            <VolunteerForm client:load />
-        </div>
-    </section>
-
-    <!-- Donate Section -->
-    <section id="donate" class="py-20 bg-brand-navy text-white">
-        <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-            <h2 class="text-3xl font-display font-bold mb-4">Donate to the Campaign</h2>
-            <p class="text-blue-200 mb-8 leading-relaxed font-body">
-                Campaign contributions help us reach voters, print materials, run ads, and get August's
-                message out across Dover & East Pawling. Every dollar helps build the Hudson Valley our families
-                deserve.
-            </p>
-
-            <!-- Donation amount buttons -->
-            <div class="flex flex-wrap gap-3 justify-center mb-8">
-                {
-                    [
-                        { label: "$10", amount: "10" },
-                        { label: "$25", amount: "25" },
-                        { label: "$50", amount: "50" },
-                        { label: "$100", amount: "100" },
-                        { label: "$250", amount: "250" },
-                        { label: "Other", amount: null },
-                    ].map(({ label, amount }) => {
-                        const refcode = amount ? `getinvolved_${amount}` : "getinvolved_other";
-                        const params = new URLSearchParams();
-                        if (amount) params.set("amount", amount);
-                        params.set("refcode", refcode);
-                        const href = `https://secure.actblue.com/donate/august-uribe-1?${params.toString()}`;
-                        return (
-                            <a
-                                href={href}
-                                class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-5 py-3 rounded font-display font-semibold transition-colors min-w-[4rem]"
-                            >
-                                {label}
-                            </a>
-                        );
-                    })
-                }
-            </div>
-
-            <a
-                href="https://secure.actblue.com/donate/august-uribe-1?refcode=getinvolved_main"
-                class="inline-block bg-brand-steel hover:bg-brand-steel-dark text-white px-8 py-4 rounded font-display font-bold text-xl transition-colors"
-            >
-                Donate Now
-            </a>
-
-            <p class="mt-6 text-xs text-blue-300 font-body">
-                Paid for by August Uribe for Dutchess County Legislator, Dover & East Pawling.<br />
-                Contributions are subject to New York State campaign finance laws.
-                Contributions from corporations, LLCs, and foreign nationals are prohibited.
-            </p>
         </div>
     </section>
 </BaseLayout>
