@@ -3,12 +3,15 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import BlockQuote from "@/components/BlockQuote.astro";
 import FilmStrip from "@/components/FilmStrip.astro";
 
-const campaignSigns = [
-    { src: "/images/August Dover Sign 2.jpg", alt: "August Uribe campaign sign in Dover" },
-    { src: "/images/August Dover Sign.jpg", alt: "August Uribe campaign sign in Dover" },
-    { src: "/images/August Pawl8ng Sign.jpg", alt: "August Uribe campaign sign in Pawling" },
-    { src: "/images/August Pawling Sign 2.jpg", alt: "August Uribe campaign sign in Pawling" },
-    { src: "/images/August Pawling Sign.jpg", alt: "August Uribe campaign sign in Pawling" },
+const images = [
+    { src: "/images/August Dover Sign.jpg", alt: "August Uribe next to the Dover town sign" },
+    { src: "/images/August Pawl8ng Sign.jpg", alt: "August Uribe next to the Pawling town sign" },
+    { src: "/images/August Pawling Sign.jpg", alt: "August Uribe next to the Pawling town sign" },
+    { src: "/images/August_Family.jpg", alt: "August with his family" },
+    { src: "/images/August_Aymar.jpeg", alt: "August with Comptroller Dan Aymar" },
+    { src: "/images/August_Raised_Hand.jpeg", alt: "August raising his hand" },
+    { src: "/images/August_Mygan.jpeg", alt: "August with District 23 Legislator  Candidate Marty Mygan" },
+    { src: "/images/August_DCDC_Chair_Dupree.jpeg", alt: "August with DCDC Chair Michael Dupree" },
 ];
 ---
 
@@ -84,7 +87,7 @@ const campaignSigns = [
             </h2>
             <p class="text-blue-200 font-body italic">August around the community</p>
         </div>
-        <FilmStrip images={campaignSigns} />
+        <FilmStrip images={images} />
     </section>
 
     <!-- Stats -->
