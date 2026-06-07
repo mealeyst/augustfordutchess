@@ -37,15 +37,23 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Pillar 1: Reduce Costs for Families — light background -->
     <section id="reduce-costs" class="relative py-24 bg-white overflow-hidden">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="max-w-2xl mb-14">
-                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">Reduce Costs for Families</h2>
-                <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
-                <p class="text-gray-600 text-lg leading-relaxed font-body">
-                    Working families and seniors in Dover & East Pawling are feeling the squeeze of rising costs.
-                    August will prioritize their needs, enforce fiscal discipline, and align the county
-                    budget with what our community actually requires, which includes taking on the housing
-                    affordability crisis head-on.
-                </p>
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">Reduce Costs for Families</h2>
+                    <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed font-body">
+                        Working families and seniors in Dover & East Pawling are feeling the squeeze of rising costs.
+                        August will prioritize their needs, enforce fiscal discipline, and align the county
+                        budget with what our community actually requires, which includes taking on the housing
+                        affordability crisis head-on.
+                    </p>
+                </div>
+                <img
+                    src="/images/pexels-ivan-s-8964184.jpg"
+                    alt="An older resident sits quietly at home, weighing the rising cost of living."
+                    loading="lazy"
+                    class="rounded-2xl shadow-lg w-full h-72 sm:h-80 lg:h-96 object-cover object-[center_30%]"
+                />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
@@ -80,15 +88,23 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Pillar 2: Infrastructure — dark background -->
     <section id="infrastructure" class="relative py-24 bg-brand-navy overflow-hidden">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="max-w-2xl mb-14">
-                <h2 class="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                    Support &amp; Maintain<br />Infrastructure
-                </h2>
-                <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
-                <p class="text-blue-200 text-lg leading-relaxed font-body">
-                    Dover & East Pawling are suffering from aging rural roads and bridges, and drainage systems that
-                    can't handle increasingly active storms due to climate change.
-                </p>
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl sm:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                        Support &amp; Maintain<br />Infrastructure
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
+                    <p class="text-blue-200 text-lg leading-relaxed font-body">
+                        Dover & East Pawling are suffering from aging rural roads and bridges, and drainage systems that
+                        can't handle increasingly active storms due to climate change.
+                    </p>
+                </div>
+                <img
+                    src="/images/SnowPlow.webp"
+                    alt="A snowplow clears a Dutchess County road during a winter storm."
+                    loading="lazy"
+                    class="rounded-2xl shadow-lg w-full h-72 sm:h-80 lg:h-96 object-cover"
+                />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
@@ -123,16 +139,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Pillar 3: Public Safety & Health — light gray background -->
     <section id="public-safety" class="relative py-24 bg-brand-light overflow-hidden">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="max-w-2xl mb-14">
-                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
-                    Protect Public<br />Safety &amp; Health
-                </h2>
-                <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
-                <p class="text-gray-600 text-lg leading-relaxed font-body">
-                    Strong communities are safe communities. August will ensure our first responders have
-                    what they need, expand access to mental health treatment, and protect the civil liberties
-                    of every resident, because safety and freedom are not in conflict.
-                </p>
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
+                        Protect Public<br />Safety &amp; Health
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed font-body">
+                        Strong communities are safe communities. August will ensure our first responders have
+                        what they need, expand access to mental health treatment, and protect the civil liberties
+                        of every resident, because safety and freedom are not in conflict.
+                    </p>
+                </div>
+                <img
+                    src="/images/Pawling_Fire_Department.jpg"
+                    alt="A Pawling Fire Department truck, one of the local first responders August will support."
+                    loading="lazy"
+                    class="rounded-2xl shadow-lg w-full h-72 sm:h-80 lg:h-96 object-cover"
+                />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
@@ -167,16 +191,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
     <!-- Pillar 4: Economic Opportunity — white background -->
     <section id="economic-opportunity" class="relative py-24 bg-white overflow-hidden">
         <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="max-w-2xl mb-14">
-                <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
-                    Expand Economic<br />Opportunity
-                </h2>
-                <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
-                <p class="text-gray-600 text-lg leading-relaxed font-body">
-                    A thriving Dover & East Pawling means small businesses that succeed, young families that choose
-                    to stay, and a natural environment worth protecting. August will create the conditions
-                    for lasting economic growth while preserving what makes this community worth living in.
-                </p>
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-14">
+                <div class="max-w-2xl">
+                    <h2 class="text-4xl sm:text-5xl font-display font-bold text-brand-navy mb-6 leading-tight">
+                        Expand Economic<br />Opportunity
+                    </h2>
+                    <div class="w-16 h-1 bg-brand-gold rounded-full mb-6"></div>
+                    <p class="text-gray-600 text-lg leading-relaxed font-body">
+                        A thriving Dover & East Pawling means small businesses that succeed, young families that choose
+                        to stay, and a natural environment worth protecting. August will create the conditions
+                        for lasting economic growth while preserving what makes this community worth living in.
+                    </p>
+                </div>
+                <img
+                    src="/images/PawlingFarmersMarket.jpg"
+                    alt="Vendors and neighbors gather at the local Pawling farmers market on the village green."
+                    loading="lazy"
+                    class="rounded-2xl shadow-lg w-full h-72 sm:h-80 lg:h-96 object-cover"
+                />
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {
