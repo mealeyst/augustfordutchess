@@ -47,9 +47,15 @@ const frames = [...images, ...images];
             transparent 40px
         );
         background-size: 40px 14px;
-        background-position: center;
+        background-position: 0 center;
         background-repeat: repeat-x;
         z-index: 2;
+        /* Scroll the sprocket holes leftward in sync with the frames */
+        animation: film-perforations-scroll 1.0s linear infinite;
+    }
+
+    .film:hover .film-perforations {
+        animation-play-state: paused;
     }
 
     .film-perforations--top {
@@ -99,8 +105,19 @@ const frames = [...images, ...images];
         }
     }
 
+    @keyframes film-perforations-scroll {
+        from {
+            background-position: 0 center;
+        }
+        to {
+            /* One full pattern repeat (matches background-size width) */
+            background-position: -40px center;
+        }
+    }
+
     @media (prefers-reduced-motion: reduce) {
-        .film-track {
+        .film-track,
+        .film-perforations {
             animation: none;
         }
         .film {
