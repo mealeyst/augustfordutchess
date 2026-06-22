@@ -18,8 +18,10 @@ const volunteerOptions = [
     { value: "social", label: "Social media support" },
     { value: "deliver-yardsign", label: "Deliver yard signs" },
     { value: "want-yardsign", label: "Want a yard sign" },
-    { value: "coffeechats", label: "Coffee & Conversation events" },
-    { value: "host-event", label: "Host an event" },
+    {
+        value: "host-event",
+        label: "Host or attend a party for friends and family in your neighborhood",
+    },
     { value: "other", label: "Other" },
 ];
 
