@@ -10,7 +10,7 @@ export default {
                     steel: "#4F7FA1",
                     "steel-dark": "#3a6180",
                     "sky": "#8bcefe",
-                    gold: "#d4af37",
+                    gold: "#e88421",
                     money: "#1f7a3a",
                     "money-dark": "#175c2c",
                     light: "#f2f5f9",
